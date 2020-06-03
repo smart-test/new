@@ -1,0 +1,98 @@
+.product-hands
+  &__content
+    display: flex
+  &__row
+    display: flex
+    justify-content: center
+    margin-top: 7rem
+  &__title
+    color: $primary
+    letter-spacing: 0.02em
+  &__left
+    display: flex 
+    &-card
+      &::before  
+        position: absolute
+        content: ''
+        height: 35.5vw
+        width: 1px
+        background-color: $primary
+        opacity: 0.5
+        margin-top: 12vw  
+        right: 50%  
+  &__right
+    margin-left: 7vw
+  &__bottle
+    max-width: 14vw 
+    margin-left: 0vw
+    margin-top: 1vw
+    margin-bottom: -0.33vw
+    margin-right: 6vw
+    &-90
+      max-width: 15vw
+      margin-top: -3vw
+      margin-left: 0vw
+      margin-right: 4vw
+    &-cap
+      display: flex
+      flex-direction: column
+      align-items: center
+      margin-bottom: 16vw
+      &--left
+        margin-bottom: 17.5vw
+  &__card
+    display: flex
+    flex-direction: column
+    margin-left: 3vw
+.hands-card
+  &__volume
+    font-size: 1vw
+    margin-left: 7vw
+    color: #C3104A
+  &__text
+    margin-top: -1.5vw
+    margin-left: 2.5vw
+  &__row
+    display: flex
+    align-items: flex-end
+    margin-top: 4vw
+    margin-bottom: 2vw
+  &__substance
+    color: rgba(48, 103, 182, 0.5)
+    font-size: 1vw  
+    margin-top: -0.2vw
+    font-weight: 600
+  &__subtitle
+    color: $primary
+    font-size: 1vw
+    max-width: 20vw
+    margin-top: 1.6vw
+    line-height: 1.4
+  &__description
+    font-size: 1vw
+    margin-top: 1.4vw
+    max-width: 33vw
+    line-height: 1.4
+    color: #707070
+  &__title
+    color: $primary
+    font-size: 1.4vw
+    font-weight: normal   
+    text-transform: uppercase
+  &__btn
+    padding: 0.6vw 2.1vw
+    font-size: 1.2vw
+    font-weight: 600
+    color: $primary
+    transition: 0.4s
+    &:hover
+      background-color: $primary
+      color: #ffffff
+.btn-row
+  margin-top: -1.9vw
+  margin-bottom: 15vw
+.bottle-cap
+  &__position  
+    margin-bottom: 1vw
+.back-mobile
+  display: none

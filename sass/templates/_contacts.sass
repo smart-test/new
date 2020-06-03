@@ -1,0 +1,96 @@
+.contacts
+  padding-bottom: 150px
+  background-color: #fff
+  font-size: 1vw
+  &__social
+    color: $primary
+    display: flex
+    align-items: center
+    justify-content: space-between
+    width: 260px
+  &__btn
+    max-width: 12vw  
+    margin-top: 4vw
+    transition: 0.4s
+    &:hover
+      background-color: $primary
+      color: #fff
+  &__row
+    display: flex
+    justify-content: center 
+  &__title
+    color: $primary    
+  &__conection
+    display: flex
+    flex-direction: column 
+  &__text
+    color: $secondary
+    margin-left: 3.57rem 
+    text-decoration: none
+    &-phone
+      margin-left: 3.8rem
+  &-phone
+    margin-left: 3px
+    display: flex
+    align-items: center  
+  &-location
+    margin-left: 3px
+    display: flex
+    align-items: center 
+    margin-bottom: 26px
+  &-mail
+    display: flex
+    align-items: center 
+    margin-bottom: 26px   
+.row
+  &-place
+    display: flex
+    justify-content: space-between
+    margin-top: 5vw
+  &-contacts
+    display: flex
+    justify-content: space-between  
+    align-items: flex-start  
+    margin-top: 2rem
+.form
+  display: flex
+  flex-direction: column
+  &-click
+    display: flex
+    flex-wrap: wrap
+  &__input
+    padding: 0.7vw 0 0.7vw 0.7vw
+    margin-bottom: 0.7vw
+.textarea
+  padding: 0.7vw 0 4vw 0.7vw  
+  border: 1px solid rgba(47, 105, 178, 0.5)
+  color: $primary
+  outline: none 
+.input
+  font-size: 1vw  
+  border: 1px solid rgba(47, 105, 178, 0.5)
+  color: $primary
+  outline: none
+.policy
+  &__checkbox  
+    opacity: 0
+    visibility: hidden 
+    &:checked +
+      .policy__label
+        &::before
+          background: $primary url('../img/check.svg') no-repeat center 
+  &__label
+    display: flex
+    align-items: center
+    font-size: 0.82vw
+    color: $primary
+    &::before
+      content: ''
+      width: 1.1vw
+      height: 1.1vw 
+      border: 1px solid $primary
+      border-radius: 1px
+      cursor: pointer 
+      margin-right: 0.3vw
+.map
+  width: 43vw

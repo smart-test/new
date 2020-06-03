@@ -1,0 +1,45 @@
+
+.popup-start {
+	cursor:pointer;
+}
+
+.popup-start-big {
+  cursor: pointer;
+}
+
+.popup {
+  position: fixed;
+	height: 100%;
+	width: 100%;
+  top: 0;
+  left: 0;
+  display: none;
+  display: flex;
+  text-align: center;
+}
+
+.popup_bg {
+  backdrop-filter: blur(40px);
+  background: rgba(255, 255, 255, 0.5);
+	position: absolute;
+	z-index:1;
+	height:100%;
+	width:100%;
+}
+
+
+.popup_img {
+	position: relative;
+	z-index: 5;
+	height: 82vh;
+  margin: auto;
+  margin-top: 16vh;
+}
+
+.popup_img-big {
+  position: relative;
+	z-index: 5;
+	height: 100vh;
+  margin: auto;
+  margin-top: 3vh;
+}

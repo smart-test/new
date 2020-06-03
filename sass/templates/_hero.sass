@@ -1,0 +1,81 @@
+.hero
+  display: flex
+  height: 100vh
+  align-items: center
+  &__description
+    display: flex
+    flex-wrap: wrap
+    max-width: 38vw 
+    margin-top: 1.3vw
+    font-weight: 600
+  &__text
+    display: flex
+    flex-direction: column
+    justify-content: center
+    margin-left: 3vw
+    height: 100vh
+    &--2
+      margin-top: -0.4vw
+    &--3
+      margin-top: 2vw  
+  &__title
+    margin-top: 7vw
+    letter-spacing: 0.02em
+    color: #C3104A  
+    max-width: 40vw
+    &--2
+      line-height: 1.4
+  &__subtitle
+    margin-top: 0
+    line-height: 1.5
+    color: $primary
+    max-width: 34vw  
+    &--2
+      max-width: 47vw
+      margin-top: -1vw
+    &--3
+      max-width: 47vw  
+  &__btn
+    max-width: 11vw
+    margin-top: 4vw
+    transition: 0.4s
+    &:hover
+      color: #F9F9F9
+      background-color: $primary
+.swiper
+  &-button
+    &-prev, &-next 
+      &::after
+        display: none
+    &-next
+      background: url('../img/next.svg')  no-repeat center 
+      right: 6vw
+    &-prev
+      background: url('../img/prew.svg')  no-repeat center
+      left: 8vw
+  &-slide
+    display: flex
+    justify-content: center
+    height: 100vh
+    width: 100vw
+    &__bg
+      &-1
+        width: 100vw
+        background: url('../img/bg1.jpg') no-repeat center / cover
+      &-2
+        width: 100vw
+        background: url('../img/bg2.jpg') no-repeat center / cover  
+      &-3
+        width: 100vw
+        background: url('../img/bg3.jpg') no-repeat center /cover
+.description
+  &__text
+    color: #4F93AD
+    max-width: 15vw   
+    border-left: 0.05vw solid #4F93AD
+    padding-left: 0.9vw
+    letter-spacing: 0.03em
+    margin-right: 2.5vw
+    margin-bottom: 2vw
+.section-mobile
+  display: none    

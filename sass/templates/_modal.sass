@@ -1,0 +1,66 @@
+.modal
+  opacity: 0
+  visibility: hidden
+  position: fixed
+  z-index: 99999
+  left: 0
+  top: 0
+  bottom: 0
+  right: 0
+  width: 100%
+  height: 100%
+  display: flex
+  align-items: center
+  justify-content: center
+  backdrop-filter: blur(25px)
+  background: rgba(255, 255, 255, 0.5)  
+  &-nav
+    font-size: 18px
+    font-weight: 600
+    &__top
+      margin-top: 5vh
+      display: flex
+      flex-direction: column
+      align-items: center
+      height: 55vh
+      justify-content: space-between
+    &__bottom
+      margin-top: 1vh
+      display: flex
+      flex-direction: column
+      align-items: center
+      font-size: 16px
+      font-weight: 600
+  &--visible
+    opacity: 1
+    visibility: visible
+  &__dialog
+    position: relative 
+    color: $primary
+    width: 100vw
+    height: 90vh
+    justify-content: space-around
+    align-items: center
+    display: flex
+    flex-direction: column
+  &__close
+    position: absolute
+    right: 20px
+    top: 0px
+    background: url('../img/mobile/close.svg') no-repeat center
+    border: none
+    margin: 12px
+    cursor: pointer
+    outline: none
+    width: 24px
+    height: 24px
+  &__title
+    text-align: center
+    margin: 0
+    margin-bottom: 2.428rem 
+.menu-puck
+  position: fixed
+  border: none
+  background-color: transparent
+  right: 5px  
+
