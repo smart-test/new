@@ -11,7 +11,7 @@
   align-items: center
   justify-content: center
   backdrop-filter: blur(25px)
-  background: rgba(255, 255, 255, 0.5) 
+  background: rgba(255, 255, 255, 0.9) 
   display: none
   &__active
     display: flex
@@ -38,13 +38,15 @@
     width: 65vw
     font-size: 1vw
   &-product
-    flex-basis: 45%
-    &__total
+    position: relative
+    flex-basis: 50%
+    border-right: 1px solid rgba(47, 105, 178, 0.5)
+    padding-right: 65px
+    margin-right: 50px
+    &__row
+      display: flex
       position: relative
-      border-right: 1px solid rgba(47, 105, 178, 0.5)
-      padding-right: 65px
-      margin-right: 50px
-      height: 100%
+      margin-bottom: 50px
   &__total
     position: absolute
     color: $primary
@@ -78,6 +80,46 @@
       flex-direction: column
     &__active
       display: block
+.product-choice
+  color: $primary
+  line-height: 1.4
+  &__close
+    position: absolute
+    right: 0
+    cursor: pointer
+    img
+      max-width: 1vw
+  &__pieces
+    min-width: 2.1vw
+    margin-right: 1vw
+    margin-left: 1vw
+  &__type
+    opacity: 0.5  
+  &__quantity
+  &__name
+    font-size: 1vw
+    font-weight: normal
+    max-width: 90%
+  &__btn
+    position: absolute
+    bottom: 0
+    right: 1vw
+    display: flex
+    align-items: center
+    max-width: 20%
+.btn
+  &-pieces  
+    border: none
+    background-color: transparent
+    font-size: 1.2vw
+    font-weight: normal
+    cursor: pointer
+  &-basket
+    display: flex
+    justify-content: space-between
+    width: 100%  
+
+
 
         
       

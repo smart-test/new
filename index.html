@@ -270,10 +270,44 @@
   <div class="modal-basket">
     <div class="basket-card">
       <div class="basket-product">
-        <div class="basket-product__total">
-          <span class="basket__total">Итого:</span>
-          <span class="basket__quantity">шт</span>
-        </div>
+        <div class="basket-product__row">
+          <div class="product-choice">
+            <div class="product-choice__name">Антисептик для дома и офиса <span class="product-choice__cap">(флип-топ)</span></div>
+            <div class="product-choice__type">гель</div>
+            <div class="product-choice__size">500мл</div>
+          </div>
+          <div class="product-choice__quanity">
+            <div class="product-choice__close">
+              <img src="img/mobile/close.svg" alt="удалить">
+            </div>
+            <div class="product-choice__btn">
+              <button class="btn-pieces">-</button>
+              <div class="product-choice__pieces">1 шт</div>
+              <button class="btn-pieces">+</button>
+              </div>
+          </div>
+        </div> 
+        <div class="basket-product__row">
+          <div class="product-choice">
+            <div class="product-choice__name">Антисептик для рук <span class="product-choice__cap">(флип-топ)</span></div>
+            <div class="product-choice__type">гель</div>
+            <div class="product-choice__size">70мл</div>
+          </div>
+          <div class="product-choice__quanity">
+            <div class="product-choice__close">
+              <img src="img/mobile/close.svg" alt="удалить">
+            </div>
+            <div class="product-choice__btn">
+              <button class="btn-pieces">-</button>
+              <div class="product-choice__pieces">1 шт</div>
+              <button class="btn-pieces">+</button>
+              </div>
+          </div>
+        </div> 
+          <div class="basket-product__total">
+            <span class="basket__total">Итого:</span>
+            <span class="basket__quantity">2 шт</span>
+          </div>
       </div>
       <div class="basket-form">
         <form action="send.php" class="form contacts__form" method="POST">
@@ -288,7 +322,10 @@
               <input type="checkbox" name="policy-checkbox" id="policy-checkbox" class="policy__checkbox" checked>
               <label for="policy-checkbox" class="policy__label">Я соглашаюсь с обработкой данных</label>
             </div>
-            <button class="btn basket__btn"><img src="img/basket.svg" alt="корзина">заказать</button>
+            <div class="btn-basket">
+              <button class="btn basket__btn">очистить корзину</button>
+              <button class="btn basket__btn"><img src="img/basket.svg" alt="корзина">заказать</button>
+            </div>
           </div>
         </form>
       </div>

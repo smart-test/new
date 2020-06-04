@@ -442,6 +442,26 @@ body {
   opacity: 1;
 }
 
+.thanks {
+  background-color: #f1f1f1f1;
+}
+
+.thanks-container {
+  text-align: center;
+  color: #2F69B2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 80vh;
+}
+
 .container {
   width: 85%;
   margin: auto;
@@ -1502,6 +1522,7 @@ body {
 
 .hero__subtitle--2 {
   max-width: 47vw;
+  letter-spacing: normal;
   margin-top: -1vw;
 }
 
@@ -1831,26 +1852,60 @@ body {
   background-color: #fff;
 }
 
-.partner__title {
-  color: #2F69B2;
-}
-
-.partner__row-icon {
+.partner__img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-preferred-size: 20%;
+      flex-basis: 20%;
+  margin-bottom: 60px;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.partner__img:nth-child(1) {
+  -ms-flex-preferred-size: 25%;
+      flex-basis: 25%;
+}
+
+.partner__img:nth-child(2) {
+  -ms-flex-preferred-size: 25%;
+      flex-basis: 25%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.partner__img:nth-child(3) {
+  -ms-flex-preferred-size: 25%;
+      flex-basis: 25%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.partner__img:nth-child(4) {
+  -ms-flex-preferred-size: 25%;
+      flex-basis: 25%;
+}
+
+.partner__title {
+  color: #2F69B2;
+  margin-top: 1vw;
+}
+
+.partner__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
-  margin-top: 7.2vw;
-  margin-bottom: -3.2vw;
-}
-
-.partner__row-icon:last-child {
-  padding-bottom: 13rem;
+  margin-top: 114px;
+  margin-bottom: 150px;
 }
 
 .container-mobile {
@@ -2412,7 +2467,7 @@ body {
           justify-content: center;
   -webkit-backdrop-filter: blur(25px);
           backdrop-filter: blur(25px);
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.9);
   display: none;
 }
 
@@ -2461,16 +2516,20 @@ body {
 }
 
 .basket-product {
-  -ms-flex-preferred-size: 45%;
-      flex-basis: 45%;
-}
-
-.basket-product__total {
   position: relative;
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
   border-right: 1px solid rgba(47, 105, 178, 0.5);
   padding-right: 65px;
   margin-right: 50px;
-  height: 100%;
+}
+
+.basket-product__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  margin-bottom: 50px;
 }
 
 .basket__total {
@@ -2521,6 +2580,68 @@ body {
 
 .basket-icons__active {
   display: block;
+}
+
+.product-choice {
+  color: #2F69B2;
+  line-height: 1.4;
+}
+
+.product-choice__close {
+  position: absolute;
+  right: 0;
+  cursor: pointer;
+}
+
+.product-choice__close img {
+  max-width: 1vw;
+}
+
+.product-choice__pieces {
+  min-width: 2.1vw;
+  margin-right: 1vw;
+  margin-left: 1vw;
+}
+
+.product-choice__type {
+  opacity: 0.5;
+}
+
+.product-choice__name {
+  font-size: 1vw;
+  font-weight: normal;
+  max-width: 90%;
+}
+
+.product-choice__btn {
+  position: absolute;
+  bottom: 0;
+  right: 1vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 20%;
+}
+
+.btn-pieces {
+  border: none;
+  background-color: transparent;
+  font-size: 1.2vw;
+  font-weight: normal;
+  cursor: pointer;
+}
+
+.btn-basket {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
 }
 
 @media screen and (max-width: 1230px) {
@@ -3560,71 +3681,38 @@ body {
     padding-top: 0;
   }
   .partner__img {
-    max-width: 100px;
-    margin-bottom: 54px;
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
   }
-  .partner__img-8 {
-    max-width: 60px;
-    margin-top: 5px;
+  .partner__img:nth-child(1) {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
   }
-  .partner__img-4 {
-    margin-top: -5px;
+  .partner__img:nth-child(2) {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
   }
-  .partner__img-5 {
-    max-width: 130px;
-    margin-top: -30px;
+  .partner__img:nth-child(3) {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
   }
-  .partner__img-6 {
-    margin-top: -10px;
+  .partner__img:nth-child(4) {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
   }
-  .partner__img-7 {
-    margin-top: -10px;
-  }
-  .partner__img-10 {
-    max-width: 56px;
-    margin-top: -15px;
-  }
-  .partner__img-11 {
-    max-width: 66px;
-  }
-  .partner__img-14 {
-    margin-top: 10px;
-  }
-  .partner__img-13 {
-    margin-top: 20px;
+  .partner__img--item {
+    max-width: 120px;
   }
   .partner__title {
     margin-top: 0;
     font-size: 17px;
   }
-  .partner__col-mob {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
-  }
-  .partner__row-icon-mob {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    height: 650px;
+  .partner__row {
+    margin-top: 65px;
+    margin-bottom: 112px;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    margin-bottom: 100px;
-    margin-top: 55px;
-  }
-  .container-descopt {
-    display: none;
-  }
-  .container-mobile {
-    display: block;
   }
   .header {
     display: none;

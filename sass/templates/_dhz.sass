@@ -32,17 +32,29 @@
     width: 25vw
 .partner
   background-color: #fff
+  &__img
+    display: flex
+    flex-basis: 20%
+    margin-bottom: 60px
+    justify-content: space-evenly
+    &:nth-child(1)
+      flex-basis: 25%
+    &:nth-child(2)
+      flex-basis: 25%
+      justify-content: center
+    &:nth-child(3)
+      flex-basis: 25%
+      justify-content: center
+    &:nth-child(4)
+      flex-basis: 25%
   &__title
     color: $primary
-    mt1vw    
+    margin-top: 1vw
   &__row
-    &-icon
-      display: flex
-      justify-content: space-between
-      align-items: flex-end
-      margin-top: 7.2vw
-      margin-bottom: -3.2vw
-      &:last-child
-        padding-bottom: 13rem
+    display: flex
+    flex-wrap: wrap
+    align-items: flex-end
+    margin-top: 114px
+    margin-bottom: 150px
 .container-mobile
   display: none

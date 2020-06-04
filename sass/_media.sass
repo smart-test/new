@@ -722,47 +722,24 @@
   .partner
     padding-top: 0
     &__img
-      max-width: 100px
-      margin-bottom: 54px
-      &-8
-        max-width: 60px
-        margin-top: 5px
-      &-4
-        margin-top: -5px 
-      &-5
-        max-width: 130px 
-        margin-top: -30px  
-      &-6
-        margin-top: -10px
-      &-7
-        margin-top: -10px    
-      &-10
-        max-width: 56px  
-        margin-top: -15px
-      &-11
-        max-width: 66px  
-      &-14
-        margin-top: 10px
-      &-13
-        margin-top: 20px  
+      flex-basis: 50%
+      &:nth-child(1)
+        flex-basis: 50%
+      &:nth-child(2)
+        flex-basis: 50%
+      &:nth-child(3)
+        flex-basis: 50%    
+      &:nth-child(4)
+        flex-basis: 50%  
+      &--item
+        max-width: 120px  
     &__title
       margin-top: 0  
       font-size: 17px
-    &__col-mob
-      display: flex
-      justify-content: space-evenly
-    &__row-icon-mob
-      display: flex
-      flex-direction: column
-      height: 650px
+    &__row
+      margin-top: 65px
+      margin-bottom: 112px
       align-items: center  
-      margin-bottom: 100px
-      margin-top: 55px  
-  .container
-    &-descopt
-      display: none
-    &-mobile
-      display: block
   .header
     display: none   
   .section
