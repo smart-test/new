@@ -79,7 +79,7 @@
               <p class="home-card__subtitle">Максимальная защита и оптимальный объем.</p>
               <p class="home-card__description">Cостав: спирт изопропиловый (75%), перекись водорода, увлажняющий агент (глицерин), вода, экстракт алоэ вера, витамин Е, функциональные добавки.</p>
               <div class="btn-row">
-                <button class="btn home-card__btn" data-name="Антисептик для дома и офиса" data-size="500 мл" data-type="гель" data-cap="триггер">в корзину</button>
+                <button class="btn btn__basket home-card__btn" data-name="Smartsept для дома и офиса" data-size="500 мл" data-type="" data-cap="триггер">в корзину</button>
                 <span class="home-card__volume">500 мл</span>
               </div>
             </div>
@@ -100,7 +100,7 @@
               <p class="home-card__subtitle">Максимальная защита и оптимальный объем.</p>
               <p class="home-card__description">Cостав: спирт изопропиловый (75%), перекись водорода, увлажняющий агент (глицерин), вода, экстракт алоэ вера, витамин Е, функциональные добавки.</p>
               <div class="btn-row">
-                <button class="btn home-card__btn" data-name="Антисептик для дома и офиса" data-size="1000 мл" data-type="гель" data-cap="флип-топ">в корзину</button>
+                <button class="btn btn__basket home-card__btn" data-name="Smartsept для дома и офиса" data-size="1000 мл" data-type="" data-cap="флип-топ">в корзину</button>
                 <span class="home-card__volume">1000 мл</span>
               </div>
             </div>
@@ -120,7 +120,7 @@
               <p class="home-card__subtitle">Максимальная защита и оптимальный объем.</p>
               <p class="home-card__description">Cостав: спирт изопропиловый (75%), перекись водорода, увлажняющий агент (глицерин), вода, экстракт алоэ вера, витамин Е, функциональные добавки.</p>
               <div class="btn-row">
-                <button class="btn home-card__btn" data-name="Антисептик для дома и офиса" data-size="5000 мл" data-type="гель" data-cap="крышка">в корзину</button>
+                <button class="btn btn__basket home-card__btn" data-name="Smartsept для дома и офиса" data-size="5000 мл" data-type="" data-cap="крышка">в корзину</button>
                 <span class="home-card__volume">5000 мл</span>
               </div>
             </div>
@@ -141,60 +141,27 @@
   <div class="modal-basket">
     <div class="basket-card">
       <div class="basket-product">
-        <div class="basket-product__row">
-          <div class="product-choice">
-            <div class="product-choice__name">Антисептик для дома и офиса <span class="product-choice__cap">(флип-топ)</span></div>
-            <div class="product-choice__type">гель</div>
-            <div class="product-choice__size">500мл</div>
-          </div>
-          <div class="product-choice__quanity">
-            <div class="product-choice__close">
-              <img src="img/mobile/close.svg" alt="удалить">
-            </div>
-            <div class="product-choice__btn">
-              <button class="btn-pieces">-</button>
-              <div class="product-choice__pieces">1 шт</div>
-              <button class="btn-pieces">+</button>
-              </div>
-          </div>
-        </div> 
-        <div class="basket-product__row">
-          <div class="product-choice">
-            <div class="product-choice__name">Антисептик для рук <span class="product-choice__cap">(флип-топ)</span></div>
-            <div class="product-choice__type">гель</div>
-            <div class="product-choice__size">70мл</div>
-          </div>
-          <div class="product-choice__quanity">
-            <div class="product-choice__close">
-              <img src="../img/mobile/close.svg" alt="удалить">
-            </div>
-            <div class="product-choice__btn">
-              <button class="btn-pieces">-</button>
-              <div class="product-choice__pieces">1 шт</div>
-              <button class="btn-pieces">+</button>
-              </div>
-          </div>
-        </div> 
+        <div class="basket-product__wrap"></div> 
           <div class="basket-product__total">
             <span class="basket__total">Итого:</span>
             <span class="basket__quantity">2 шт</span>
           </div>
       </div>
       <div class="basket-form">
-        <form action="send.php" class="form contacts__form" method="POST">
-          <input type="text" class="input form__input" name="userName" placeholder="Ваше имя">
-          <input type="text" class="input form__input" name="userCompany" placeholder="Компания">
-          <input type="tel" class="input form__input" name="userPhone" placeholder="Номер телефона">
-          <input type="email" class="input form__input" name="userEmail" placeholder="e-mail">
-          <input type="text" class="input form__input" name="userCity" placeholder="Страна/город">
+        <form action="send-basket.php" class="form contacts__form" method="POST">
+          <input type="text" class="input form__input basket__input" name="userName" placeholder="Ваше имя">
+          <input type="text" class="input form__input basket__input" name="userCompany" placeholder="Компания">
+          <input type="tel" class="input form__input basket__input" name="userPhone" placeholder="Номер телефона">
+          <input type="email" class="input form__input basket__input" name="userEmail" placeholder="e-mail">
+          <input type="text" class="input form__input basket__input" name="userCity" placeholder="Страна/город">
           <textarea type="text" class="textarea" name="userComents" placeholder="Комментарий"></textarea>
+          <textarea type="text" class="textarea" name="userBasket" hidden></textarea>
           <div class="form-click">
             <div class="policy">
               <input type="checkbox" name="policy-checkbox" id="policy-checkbox" class="policy__checkbox" checked>
               <label for="policy-checkbox" class="policy__label">Я соглашаюсь с обработкой данных</label>
             </div>
             <div class="btn-basket">
-              <button class="btn basket__btn">очистить корзину</button>
               <button class="btn basket__btn"><img src="../img/basket.svg" alt="корзина">заказать</button>
             </div>
           </div>
@@ -202,7 +169,8 @@
       </div>
       <button class="basket-close"><img src="../img/mobile/close.svg" alt="закрыть"></button>
     </div>
-
+  </div>
+  
   <footer class="footer">
     <div class="container footer__container">
       <div class="footer__row--top">

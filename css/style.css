@@ -462,6 +462,10 @@ body {
   height: 80vh;
 }
 
+button:active, button:focus {
+  outline: none;
+}
+
 .container {
   width: 85%;
   margin: auto;
@@ -2447,6 +2451,11 @@ body {
   right: 5px;
 }
 
+.absolute {
+  position: relative;
+  z-index: 9999;
+}
+
 .modal-basket {
   position: fixed;
   z-index: 99999;
@@ -2477,6 +2486,10 @@ body {
   display: flex;
 }
 
+.basket-policy {
+  z-index: 99999;
+}
+
 .basket-form {
   position: relative;
 }
@@ -2488,10 +2501,10 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  right: 0;
   padding: 0.55vw 0.9vw;
   -webkit-transition: 0.4s;
   transition: 0.4s;
+  font-size: 17px;
 }
 
 .basket__btn:hover {
@@ -2511,7 +2524,7 @@ body {
   position: relative;
   background: rgba(242, 242, 242, 0.6);
   padding: 45px 80px 55px 53px;
-  width: 65vw;
+  width: 66vw;
   font-size: 1vw;
 }
 
@@ -2566,6 +2579,8 @@ body {
   font-weight: bold;
   cursor: pointer;
   display: none;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
 .basket-icons__inside {
@@ -2580,6 +2595,13 @@ body {
 
 .basket-icons__active {
   display: block;
+}
+
+.basket-icons:hover {
+  background-color: #C3104A;
+  color: #ffffff;
+  border-color: #C3104A;
+  opacity: 0.8;
 }
 
 .product-choice {
@@ -2598,9 +2620,10 @@ body {
 }
 
 .product-choice__pieces {
-  min-width: 2.1vw;
+  min-width: 2.4vw;
   margin-right: 1vw;
   margin-left: 1vw;
+  color: #C3104A;
 }
 
 .product-choice__type {
@@ -2638,9 +2661,9 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   width: 100%;
 }
 
@@ -3079,6 +3102,9 @@ body {
   }
   .product-hands {
     padding-bottom: 100px;
+  }
+  .product-hands__title {
+    max-width: 300px;
   }
   .product-hands__row {
     text-align: center;
@@ -3614,7 +3640,7 @@ body {
     line-height: 1.4;
   }
   .dhz {
-    background: url("../img/mobile/dhz-bg-m.jpg") no-repeat;
+    background: url("../img/mobile/dhz-bg-m.jpg") no-repeat cover center;
   }
   .dhz__row {
     display: -webkit-box;
@@ -3747,6 +3773,9 @@ body {
   }
   .mobile-logo {
     max-width: 226px;
+  }
+  .hands-card__volume, .horeca-card__volume, .home-card__volume, .medical-card__volume {
+    font-size: 17px;
   }
 }
 /*# sourceMappingURL=style.css.map */

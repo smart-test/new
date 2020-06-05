@@ -1,3 +1,6 @@
+.absolute
+  position: relative
+  z-index: 9999
 .modal-basket
   position: fixed
   z-index: 99999
@@ -16,14 +19,16 @@
   &__active
     display: flex
 .basket
+  &-policy
+    z-index: 99999
   &-form
     position: relative
   &__btn
     display: flex
     align-items: center
-    right: 0
     padding: 0.55vw 0.9vw
     transition: 0.4s
+    font-size: 17px
     &:hover
       background-color: $primary
       color: #ffffff
@@ -35,7 +40,7 @@
     position: relative
     background: rgba(242, 242, 242, 0.6)
     padding: 45px 80px 55px 53px
-    width: 65vw
+    width: 66vw
     font-size: 1vw
   &-product
     position: relative
@@ -75,11 +80,17 @@
     font-weight: bold
     cursor: pointer
     display: none
+    transition: 0.4s
     &__inside
       display: flex
       flex-direction: column
     &__active
       display: block
+    &:hover
+      background-color: #C3104A
+      color: #ffffff  
+      border-color: #C3104A
+      opacity: 0.8
 .product-choice
   color: $primary
   line-height: 1.4
@@ -90,9 +101,10 @@
     img
       max-width: 1vw
   &__pieces
-    min-width: 2.1vw
+    min-width: 2.4vw
     margin-right: 1vw
     margin-left: 1vw
+    color: #C3104A
   &__type
     opacity: 0.5  
   &__quantity
@@ -116,7 +128,7 @@
     cursor: pointer
   &-basket
     display: flex
-    justify-content: space-between
+    justify-content: flex-end
     width: 100%  
 
 
