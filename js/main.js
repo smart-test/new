@@ -12,7 +12,7 @@ $(document).ready(function () {
 
 
   // Cart
-
+  
   
 
 
@@ -359,36 +359,35 @@ $(document).ready(function() { // Ждём загрузки страницы
 	  	var img = $(this);	// Получаем изображение, на которое кликнули
 		var src = img.attr('src'); // Достаем из этого изображения путь до картинки
 		$("body").append("<div class='popup'>"+ //Добавляем в тело документа разметку всплывающего окна
-						 "<div class='popup_bg'></div>"+ // Блок, который будет служить фоном затемненным
-						 "<img src='"+src+"' class='popup_img' />"+ // Само увеличенное фото
+             "<div class='popup_bg'></div>"+ // Блок, который будет служить фоном затемненным
+             "<button class='popup_close'></button>"+ // Блок, который будет служить фоном затемненным
+             "<img src='"+src+"' class='popup_img' />"+ // Само увеличенное фото
 						 "</div>"); 
 		$(".popup").fadeIn(800); // Медленно выводим изображение
-		$(".popup_bg").click(function(){	// Событие клика на затемненный фон	   
+    $(".popup_close").click(function(){	// Событие клика на затемненный фон	  
 			$(".popup").fadeOut(800);	// Медленно убираем всплывающее окно
 			setTimeout(function() {	// Выставляем таймер
-			  $(".popup").remove(); // Удаляем разметку всплывающего окна
+        $(".popup").remove(); // Удаляем разметку всплывающего окна
+			}, 800);
+    });
+    $(".popup_bg").click(function(){	// Событие клика на затемненный фон	  
+			$(".popup").fadeOut(800);	// Медленно убираем всплывающее окно
+			setTimeout(function() {	// Выставляем таймер
+        $(".popup").remove(); // Удаляем разметку всплывающего окна
 			}, 800);
 		});
-	});
+  });
+    
 	
 });
 
-$(document).ready(function() { 
-	
-	$(".popup-start-big").click(function(){
-	  	var img = $(this);
-		var src = img.attr('src'); 
-		$("body").append("<div class='popup'>"+ 
-						 "<div class='popup_bg'></div>"+ 
-						 "<img src='"+src+"' class='popup_img-big' />"+ 
-						 "</div>"); 
-		$(".popup").fadeIn(800); 
-		$(".popup_bg").click(function(){	  
-			$(".popup").fadeOut(800);	
-			setTimeout(function() {	
-			  $(".popup").remove(); 
-			}, 800);
-		});
+$(document).ready(function() {
+	$('.news-headlines__item').click(function(event) {
+		$('.news-content').removeClass('top-content')
+		var num = $(this).attr('data-num');
+		$('#new'+num).addClass('top-content')
+		$('.news-headlines__item').removeClass('selected')
+		var num = $(this).attr('data-num');
+		$('#item'+num).addClass('selected')
 	});
-	
 });

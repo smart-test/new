@@ -1,5 +1,6 @@
 .new
   font-family: Montserrat, sans-serif
+  color: #3067B6
   &s
     &-content
       border-right: 1px solid rgba(47, 105, 178, 0.5)
@@ -12,7 +13,6 @@
       &__paragraph
         font-size: 0.99vw
         line-height: 140%
-        color: #707070
         a
           color: #C3104A
           text-decoration: none
@@ -37,4 +37,34 @@
   text-transform: uppercase
 .data-new
   opacity: 0.5
-  font-weight: 500  
+  font-weight: 500
+@media (max-width: 992px)
+  .new
+    margin-bottom: 0
+    padding-bottom: 100px
+    &s
+      &-holder
+        display: flex
+        justify-content: center
+        padding-bottom: 0
+      &-preview
+        width: inherit
+      &-content
+        display: block
+        border: none
+        padding-right: 18px
+        padding-left: 18px
+        &__heading
+          font-size: 17px
+        &__paragraph
+          font-size: 16px
+      &-headlines
+        display: none
+  .data-new
+    font-size: 16px
+@media (max-width: 576px)
+  .new
+    &s
+      &__image
+        min-height: 294px
+        object-fit: cover

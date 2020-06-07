@@ -16,11 +16,12 @@
   display: none;
   display: flex;
   text-align: center;
+  z-index: 99999;
 }
 
 .popup_bg {
   backdrop-filter: blur(40px);
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 1);
 	position: absolute;
 	z-index:1;
 	height:100%;
@@ -31,15 +32,6 @@
 .popup_img {
 	position: relative;
 	z-index: 5;
-	height: 82vh;
-  margin: auto;
-  margin-top: 16vh;
-}
-
-.popup_img-big {
-  position: relative;
-	z-index: 5;
 	height: 100vh;
   margin: auto;
-  margin-top: 3vh;
 }
