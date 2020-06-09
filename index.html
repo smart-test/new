@@ -92,7 +92,7 @@
           <textarea type="text" class="textarea" name="userBasket" hidden></textarea>
           <div class="form-click">
             <div class="policy">
-              <input type="checkbox" name="policy-checkbox" id="policy-checkbox" class="policy__checkbox" checked>
+              <input type="checkbox" name="policy-checkbox" id="policy-checkbox" required="true" class="policy__checkbox" checked>
               <label for="policy-checkbox" class="policy__label">Я соглашаюсь с обработкой данных</label>
             </div>
             <div class="btn-basket">
@@ -189,7 +189,7 @@
           <img src="img/gel_70.png" alt="гель для рук">
         </div>
       </div>
-        <img src="img/puck.gif" alt="smartsept" class="gif">
+      <![if !IE]><img src="img/puck.gif" alt="smartsept" class="gif"><![endif]>
     </div>
   </section>
   <!-- секция для дома и офиса-->
@@ -209,7 +209,7 @@
             предметов и поверхностей — дома, на работе, в&nbsp;дороге, на природе, в местах общего пользования. 
             Формула эффективна против большинства известных видов патогенных микроорганизмов: бактерий, грибов, вирусов. 
             Содержит увлажняющие компоненты, освежает <br>и смягчает кожу.</p>
-          <button onclick="window.location.href = 'home-and-office';" class="btn home-and-office__btn wow fadeIn" data-wow-delay="1.7s">подробнее</button>
+          <button onclick="window.location.href = 'home-and-office';" class="btn home-and-office__btn wow fadeIn" data-wow-delay="0.7s">подробнее</button>
         </div>
       </div>
       <img src="img/puck.gif" alt="smartsept" class="gif--out">
@@ -225,7 +225,7 @@
           <p class="description medical__description wow fadeInLeft" data-wow-delay="0.9s">Эффективная&nbsp;дезинфекция&nbsp;рук медицинских работников, операционного поля, 
             приборов и&nbsp;поверхностей. Формула уничтожает большинство известных видов патогенных микроорганизмов: бактерий, грибов, 
             вирусов. Содержит увлажняющие компоненты, освежает и смягчает кожу.</p>
-          <button onclick="window.location.href = 'medical';" class="btn medical__btn wow fadeIn" data-wow-delay="1.7s">подробнее</button>
+          <button onclick="window.location.href = 'medical';" class="btn medical__btn wow fadeIn" data-wow-delay="0.7s">подробнее</button>
         </div>
         <div class="medical__img">
           <img src="img/med.jpg" alt="медецина">
@@ -255,7 +255,7 @@
             (кафе, ресторанах, магазинах, банках, кинотеатрах, отелях, учебных заведениях, транспорте и т. д.). Формула уничтожает
              большинство известных видов патогенных микроорганизмов: бактерий, грибов, вирусов. Содержит увлажняющие компоненты, 
              освежает и смягчает кожу.</p>
-          <button onclick="window.location.href = 'horeca';" class="btn horeca__btn wow fadeIn" data-wow-delay="1.7s">подробнее</button>
+          <button onclick="window.location.href = 'horeca';" class="btn horeca__btn wow fadeIn" data-wow-delay="0.7s">подробнее</button>
         </div>
       </div>
       <img src="img/puck.gif" alt="smartsept" class="gif--out horeca__gif--out">
@@ -287,7 +287,7 @@
         <div class="map">
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2148.257609259852!2d42.12165721630575!3d57.42283778103282!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4152927d5825e681%3A0xb123b9613c095eaf!2z0JTQvNC40YLRgNC40LXQstGB0LrQuNC5INCl0LjQvNC40YfQtdGB0LrQuNC5INCX0LDQstC-0LQ!5e0!3m2!1sru!2sru!4v1589965998991!5m2!1sru!2sru" width="100%" height="450" frameborder="1" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" loading="lazy"></iframe>
         </div>
-        <form action="send.php" class="form contacts__form" method="POST">
+        <form action="send.php" class="form contacts__form" method="POST" id="contactForm">
           <input type="text" class="input form__input" name="userName" placeholder="Ваше имя">
           <input type="text" class="input form__input" name="userCompany" placeholder="Компания">
           <input type="tel" class="input form__input" name="userPhone" placeholder="Номер телефона">
@@ -296,8 +296,8 @@
           <textarea type="text" class="textarea" name="userComents" placeholder="Комментарий"></textarea>
           <div class="form-click">
             <div class="policy">
-              <input type="checkbox" name="policy-checkbox" id="policy-checkbox" class="policy__checkbox" checked>
-              <label for="policy-checkbox" class="policy__label">Я соглашаюсь с обработкой данных</label>
+              <input type="checkbox" name="policy-checkbox" id="policy" required="true" class="policy__checkbox" checked>
+              <label for="policy" class="policy__label">Я соглашаюсь с обработкой данных</label>
             </div>
             <button class="btn contacts__btn">отправить</button>
           </div>

@@ -387,7 +387,17 @@ $(document).ready(function() {
 		var num = $(this).attr('data-num');
 		$('#new'+num).addClass('top-content')
 		$('.news-headlines__item').removeClass('selected')
-		var num = $(this).attr('data-num');
-		$('#item'+num).addClass('selected')
+    $('#item'+num).addClass('selected')
+  });
+  
+  $('.content_toggle').click(function(){
+    $('.content_toggle').removeClass('content_visible')
+    var num = $(this).attr('data-new');
+    $('#new-mobile'+num).addClass('content_visible')
+  });
+
+  $('.new-close').click(function(){
+    var num = $(this).attr('data-new-close');
+    $('#new-mobile'+num).removeClass('content_visible')
 	});
 });

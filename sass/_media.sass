@@ -17,7 +17,9 @@
     &-menu
       display: flex
       justify-content: space-between
-      padding: 50px 16px 0 16px
+      position: absolute
+      top: 30px
+      padding: 0px 16px 0 16px
       position: absolute
       left: 0
       width: 100%
@@ -27,8 +29,13 @@
       max-width: 226px   
   .header
     display: none  
-         
-@media screen and ( max-width: 540px )        
+  .description
+    font-size: 1.4vw  
+  .menu-puck
+    right: 7.5vw  
+@media screen and ( max-width: 768px )
+  .menu-puck
+    right: 1vw  
   body
     width: 100%
     font-size: 17px
@@ -112,6 +119,8 @@
   .hands
     &__text
       margin-left: 6px
+    &__title
+      min-width: 100%  
 
     &__subtitle
       margin-top: -15px
@@ -120,22 +129,22 @@
     &__img
       position: absolute
       left: 14px
-      margin-top: 240px
-      min-width: 183px
+      margin-top: 200px
+      min-width: 40vw
     &__bootle
       position: absolute 
-      margin-top: 230px 
-      right: 0
-      min-width: 111px
+      margin-top: 5vw
+      right: 10vw
+      min-width: 35vw
     &__description
-      margin-top: 280px 
+      margin-top: 60vw
       min-width: 97vw
     &__btn
       margin-top: 14px  
   .gif
-    top: 450px    
-    width: 500px
-    left: -120px
+    top: 70vw   
+    width: 90vw
+    left: -40vw
   .btn
     font-size: 16px
     padding: 11px 27px
@@ -145,21 +154,22 @@
       margin-left: 6px
     &__title
       margin-left: 0
+      min-width: 100%
     &__subtitle
       margin-top: -15px
       margin-left: 0
     &__img
       position: absolute
-      right: 14px
+      right: 15vw
       margin-top: 190px
-      min-width: 183px
+      min-width: 45vw
     &__bootle
       position: absolute 
       margin-top: 190px
       left: 0
-      min-width: 111px
+      min-width: 25vw
     &__description
-      margin-top: 280px 
+      margin-top: 70vw
       min-width: 97vw
       margin-left: 0
       font-size: 14px
@@ -168,13 +178,14 @@
       margin-left: 0
   .gif
     &--out
-      top: 400px    
-      width: 500px
-      margin-left: -35px
+      top: 80vw
+      width: 90vw
+      margin-left: -10vw
   .medical
     &__text
       margin-left: 6px
-
+    &__title
+      min-width: 100%
     &__subtitle
       margin-top: -15px
       &--next
@@ -184,14 +195,14 @@
       left: 6px
       margin-top: 240px
       margin-left: 0
-      min-width: 183px
+      min-width: 40vw
     &__bootle
       position: absolute 
-      margin-top: 230px 
-      right: 0
-      min-width: 125px
+      margin-top: 18vw 
+      right: 10vw
+      min-width: 30vw
     &__description
-      margin-top: 280px 
+      margin-top: 65vw
       min-width: 97vw
       font-size: 16px
     &__btn
@@ -202,22 +213,23 @@
       margin-left: 6px
     &__title
       margin-left: 0
+      min-width: 100%
     &__subtitle
       margin-top: -15px
       margin-left: 0
     &__img
       position: absolute
-      right: 14px
-      margin-top: 230px
-      min-width: 183px
+      right: 10vw
+      margin-top: 180px
+      min-width: 45vw
     &__bootle
       position: absolute 
-      margin-top: 190px
-      left: 0
+      margin-top: 110px
+      left: 5vw
       margin-left: -20px
-      min-width: 151px
+      min-width: 36vw
     &__description
-      margin-top: 280px 
+      margin-top: 70vw
       min-width: 97vw
       margin-left: 0
       font-size: 16px
@@ -333,6 +345,562 @@
       margin-left: 0
     &__bottle
       min-width: 170px
+      margin-left: 0
+      margin-right: 30px
+      &-90
+        min-width: 187px 
+        margin-left: 0
+        margin-right: 40px
+      &-cap
+        &--left
+          margin-bottom: 220px
+          &-m
+            margin-bottom: 273px  
+  .bottle-cap__position   
+    min-width: 79px
+    &-f 
+      min-width: 57px     
+  .hands-card
+    &__text
+      margin-left: 0
+      text-align: left 
+    &__title
+      font-size: 17px
+      display: flex 
+    &__subtitle  
+      font-size: 16px
+      max-width: 100%
+      margin-top: -10px
+    &__substance
+      font-size: 16px
+      margin-top: -20px
+      font-weight: normal
+    &__description
+      font-size: 16px   
+      max-width: 100% 
+      margin-top: -10px
+    &__row
+      display: flex
+      justify-content: center  
+  .btn-row
+    display: flex
+    justify-content: space-around
+    margin-top: 30px    
+  .product-home
+    width: 100%
+    &__title
+      display: flex 
+      margin-bottom: 5vw
+    &__row
+      display: flex
+      justify-content: center
+      align-items: center
+    &__content
+      display: flex
+      flex-direction: column
+      align-items: center  
+      flex-wrap: nowrap
+    &__left
+      &-row
+        margin-top: 100px
+      &-card
+        &::before
+          display: none
+    &__right
+      margin-left: 0
+    &__bottle
+      &--home
+        &-500
+          min-width: 45vw
+          position: relative
+          top: 40vw
+          margin-left: 40px 
+        &-1000
+          min-width: 45vw
+          position: relative
+          top: 40vw  
+          margin-left: 39px
+        &-5000
+          min-width: 257px
+          position: relative
+          top: 0px
+          max-width: 50%   
+          margin-left: 13px 
+          margin-bottom: -10vw
+      &-cap
+        margin-bottom: 0    
+  .home-card
+    &__text
+      margin-left: 0
+      text-align: left 
+      margin-top: 40vw
+      margin-bottom: 10vw
+      &-5000
+        margin-top: 10vw
+    &__title
+      font-size: 17px
+      display: flex 
+    &__subtitle  
+      font-size: 16px
+      max-width: 100%
+      margin-top: -10px
+    &__substance
+      font-size: 16px
+      margin-top: -20px
+    &__description
+      font-size: 16px   
+      max-width: 100% 
+      margin-top: -10px  
+  .product-medical
+    width: 100%
+    padding-bottom: 100px  
+    &__row
+      display: flex
+      justify-content: center
+      align-items: center
+      margin-top: 85px
+    &__content
+      display: flex
+      flex-direction: column
+      align-items: center  
+      flex-wrap: nowrap
+    &__left
+      &-row
+        margin-top: 100px
+      &-card
+        &::before
+          display: none
+    &__right
+      margin-left: 0
+    &__bottle
+      margin-top: 100px
+      &--medical
+        &-250
+          min-width: 207px
+          position: relative
+          top: 270px
+          max-width: 40%   
+          margin-bottom: -3vw
+        &-1000
+          min-width: 199px
+          position: relative
+          top: 270px
+          max-width:  40%   
+          margin-bottom: -3vw
+        &-5000
+          min-width: 257px
+          position: relative
+          top: 200px
+          max-width: 50%   
+      &-cap
+        margin-bottom: -110px        
+  .medical-card
+    &__row
+      display: flex
+      justify-content: center
+    &__text
+      margin-left: 0
+      text-align: left 
+      margin-top: 320px
+      &-5000
+        margin-top: 250px
+    &__title
+      font-size: 17px
+      display: flex 
+      max-width: 100%
+    &__subtitle  
+      font-size: 16px
+      max-width: 100%
+      margin-top: -10px
+    &__substance
+      font-size: 16px
+      margin-top: -20px
+    &__description
+      font-size: 16px   
+      max-width: 100% 
+      margin-top: -10px            
+  .product-home__bottle-cap--h5000
+    margin-bottom: 40vw
+  .product-medical__bottle-cap--left-250
+    margin-bottom: -10px  
+  .product-horeca__bottle-cap--left-250
+    margin-bottom: 17px
+  .product-horeca
+    width: 100%
+    padding-bottom: 100px  
+    &__row
+      display: flex
+      justify-content: center
+      align-items: center
+      margin-top: 85px
+    &__content
+      display: flex
+      flex-direction: column
+      align-items: center  
+      flex-wrap: nowrap
+    &__left
+      &-row
+        margin-top: 100px
+      &-card
+        &::before
+          display: none
+    &__right
+      margin-left: 0
+    &__bottle
+      margin-top: 100px
+      &--horeca
+        &-250
+          min-width: 207px
+          position: relative
+          top: 270px
+          max-width: 40%   
+        &-1000
+          min-width: 199px
+          position: relative
+          top: 270px
+          max-width: 40%   
+        &-5000
+          min-width: 257px
+          position: relative
+          top: 200px
+          max-width: 50%    
+      &-cap
+        margin-bottom: -110px        
+  .horeca-card
+    &__row
+      display: flex
+      justify-content: center
+    &__text
+      margin-left: 0
+      text-align: left 
+      margin-top: 320px
+      &-5000
+        margin-top: 250px
+    &__title
+      font-size: 17px
+      display: flex 
+      max-width: 100%
+    &__subtitle  
+      font-size: 16px
+      max-width: 100%
+      margin-top: -10px
+    &__substance
+      font-size: 16px
+      margin-top: -20px
+    &__description
+      font-size: 16px   
+      max-width: 100% 
+      margin-top: -10px  
+  .gif
+    &-puck
+      min-width: 38vw
+      margin-left: 20vw
+    &-brend
+      min-width: 32vw
+      margin-top: 22vw
+      margin-left: 23.5vw
+  .brend
+    width: 100%
+    padding: 70px 13px 0 13px
+    &__description
+      max-width: 100%
+    &-sup
+      font-size: 6px
+      top: -12px
+      &-desc
+        font-size: 5px
+        top: -11px
+    &__row
+      display: flex
+      justify-content: center
+      align-items: center
+      margin-top: 70px
+      &-back
+        margin-top: 11px
+      &--title  
+        max-width: 100%
+        font-size: 17px
+      &-mid
+        display: flex
+        flex-direction: column  
+      &--left
+        order: 1  
+      &--right
+        margin-left: 186px
+        margin-top: -320px
+    &__img
+      &-big
+        min-width: 40vw
+        margin-top: 40px
+  .four-line
+    &__card
+      margin-bottom: 80px
+      &:nth-of-type(2)
+        margin-left: 0 
+      &--b
+        &::before
+          display: none
+        &-m1
+          &::before
+            content: ''
+            display: flex
+            position: absolute
+            height: 1px
+            width: 107px  
+            background-color: #C4C4C4
+            margin-top: -767px 
+            margin-left: 5px
+        &-m2
+          &::before
+            content: ''
+            display: flex
+            position: absolute
+            height: 1px
+            width: 107px  
+            background-color: #C4C4C4
+            margin-top: -537px 
+            margin-left: 5px
+        &-m3
+          &::before
+            content: ''
+            display: flex
+            position: absolute
+            height: 1px
+            width: 107px  
+            background-color: #C4C4C4
+            margin-top: -277px 
+            margin-left: 5px       
+    &__title
+      font-size: 17px
+    &__icons
+      display: flex
+      flex-direction: column
+      margin-top: 50px
+      &-img  
+        &-2  
+          margin-top: 270px
+        &-3 
+          margin-top: 270px
+        &-4  
+          margin-top: 270px   
+      &-size
+        max-width: 71px    
+    &__subtitle
+      &--tm
+        font-size: 5px
+        top: -12px
+    &__description
+      font-size: 16px
+      max-width: 100%
+      letter-spacing: -0.03em    
+  .card
+    &__row
+      display: flex
+      flex-direction: column
+    &-text
+      &-1
+        margin-top: -1000px  
+      &-2
+        margin-top: -740px  
+      &-3
+        margin-top: -490px  
+      &-4
+        margin-top: -230px  
+  .description-four
+    font-size: 16px    
+    line-height: 1.4
+  .dhz  
+    background: url('../img/mobile/dhz-bg-m.jpg') no-repeat cover center
+    &__row
+      display: flex
+      justify-content: center
+      align-items: center
+      &-back
+        margin-top: 4px
+      &-mid
+        display: flex
+        flex-direction: column
+      &--left
+        order: 1 
+    &-mobile-text
+      margin-top: 32px    
+    &__title
+      font-size: 27px  
+      margin-top: 30px  
+    &__subtitle
+      max-width: 100%  
+      margin-left: 16px 
+    &__img
+      margin-top: 20px
+      width: 227px
+      margin-left: -30px 
+    &__description
+      max-width: 100%
+      text-shadow: 0px 0px 16px rgba(0, 0, 0, 0.35) 
+      margin-left: 16px
+      margin-right: 16px 
+      display: flex
+      flex-direction: column
+    &__link
+      margin-left: 16px  
+      margin-top: 32px 
+  .partner
+    padding-top: 0
+    &__img
+      flex-basis: 50%
+      &:nth-child(1)
+        flex-basis: 50%
+      &:nth-child(2)
+        flex-basis: 50%
+      &:nth-child(3)
+        flex-basis: 50%    
+      &:nth-child(4)
+        flex-basis: 50%  
+      &--item
+        max-width: 120px  
+    &__title
+      margin-top: 50px 
+      font-size: 17px
+    &__row
+      margin-top: 65px
+      margin-bottom: 112px
+      align-items: center  
+  .header
+    display: none   
+  .section
+    overflow-x: hidden  
+  .back-mobile
+    display: flex
+    background: url('../img/mobile/back.svg') no-repeat center
+    width: 13px
+    height: 25px 
+    position: absolute
+    left: 20px
+  .mobile
+    &-menu
+      display: flex
+      justify-content: space-between
+      padding: 50px 16px 0 16px
+      position: absolute
+      left: 0
+      top: -20px
+      width: 100%
+      z-index: 999
+      background-color: transparent 
+    &-logo
+      max-width: 226px  
+  .hands-card__volume, .horeca-card__volume, .home-card__volume, .medical-card__volume
+    font-size: 17px
+  .popup
+    position: relative
+    z-index: 999999
+    &_close
+      top: 70px
+      right: 30px
+  .content
+    &_block
+      display: none
+    &_visible
+      display: block
+  .new-close
+    display: block
+    font-size: 15px 
+    text-decoration: underline             
+@media screen and ( max-width: 540px )        
+  .hands
+    &__title
+      min-width: 60% 
+    &__img
+      position: absolute
+      left: 14px
+      margin-top: 240px
+      min-width: 183px
+    &__bootle
+      position: absolute 
+      margin-top: 230px 
+      right: 0
+      min-width: 111px
+    &__description
+      margin-top: 280px 
+      min-width: 97vw
+  .gif
+    top: 450px    
+    width: 500px
+    left: -120px
+  .home-and-office
+    &__title
+      max-width: 60%
+    &__img
+      position: absolute
+      right: 14px
+      margin-top: 190px
+      min-width: 183px
+    &__bootle
+      position: absolute 
+      margin-top: 190px
+      min-width: 111px
+    &__description
+      margin-top: 280px 
+  .gif
+    &--out
+      top: 400px    
+      width: 500px
+      margin-left: -35px
+  .medical
+    &__title
+      min-width: 50%
+    &__img
+      position: absolute
+      left: 6px
+      margin-top: 240px
+      margin-left: 0
+      min-width: 183px
+    &__bootle
+      position: absolute 
+      margin-top: 230px 
+      right: 0
+      min-width: 125px
+    &__description
+      margin-top: 280px 
+  .horeca
+    &__title
+      min-width: 50%
+    &__img
+      position: absolute
+      right: 14px
+      margin-top: 230px
+      min-width: 183px
+    &__bootle
+      position: absolute 
+      margin-top: 190px
+      left: 0
+      margin-left: -20px
+      min-width: 151px
+    &__description
+      margin-top: 280px 
+      min-width: 97vw
+      margin-left: 0
+      font-size: 16px
+  .product-hands   
+    padding-bottom: 100px  
+    &__title
+      max-width: 300px
+    &__row
+      text-align: center
+      display: flex
+      align-items: center
+    &__content
+      display: flex
+      flex-direction: column
+      align-items: center  
+    &__left
+      &-card
+        &::before
+          display: none
+    &__right
+      margin-left: 0
+    &__bottle
+      min-width: 170px
       margin-left: 70px
       margin-right: 0
       &-90
@@ -367,6 +935,9 @@
       font-size: 16px   
       max-width: 100% 
       margin-top: -10px
+    &__row
+      display: flex
+      justify-content: space-around   
   .product-home
     width: 100%
     &__title
@@ -572,206 +1143,13 @@
   .gif
     &-puck
       min-width: 46vw
+      margin-left: 0
     &-brend
       min-width: 38vw
       margin-top: 31vw
       margin-left: 5vw
   .brend
-    width: 100%
-    padding: 70px 13px 0 13px
-    &__description
-      max-width: 100%
-    &-sup
-      font-size: 6px
-      top: -12px
-      &-desc
-        font-size: 5px
-        top: -11px
-    &__row
-      display: flex
-      justify-content: center
-      align-items: center
-      margin-top: 70px
-      &-back
-        margin-top: 11px
-      &--title  
-        max-width: 100%
-        font-size: 17px
-      &-mid
-        display: flex
-        flex-direction: column  
-      &--left
-        order: 1  
-      &--right
-        margin-left: 186px
-        margin-top: -320px
     &__img
       &-big
         min-width: 187px
-        margin-top: 40px
-  .four-line
-    &__card
-      margin-bottom: 80px
-      &:nth-of-type(2)
-        margin-left: 0 
-      &--b
-        &::before
-          display: none
-        &-m1
-          &::before
-            content: ''
-            display: flex
-            position: absolute
-            height: 1px
-            width: 107px  
-            background-color: #C4C4C4
-            margin-top: -767px 
-            margin-left: 5px
-        &-m2
-          &::before
-            content: ''
-            display: flex
-            position: absolute
-            height: 1px
-            width: 107px  
-            background-color: #C4C4C4
-            margin-top: -537px 
-            margin-left: 5px
-        &-m3
-          &::before
-            content: ''
-            display: flex
-            position: absolute
-            height: 1px
-            width: 107px  
-            background-color: #C4C4C4
-            margin-top: -277px 
-            margin-left: 5px       
-    &__title
-      font-size: 17px
-    &__icons
-      display: flex
-      flex-direction: column
-      margin-top: 50px
-      &-img  
-        &-2  
-          margin-top: 270px
-        &-3 
-          margin-top: 270px
-        &-4  
-          margin-top: 270px   
-      &-size
-        max-width: 71px    
-    &__subtitle
-      &--tm
-        font-size: 5px
-        top: -12px
-    &__description
-      font-size: 16px
-      max-width: 100%
-      letter-spacing: -0.03em    
-  .card
-    &__row
-      display: flex
-      flex-direction: column
-    &-text
-      &-1
-        margin-top: -1000px  
-      &-2
-        margin-top: -740px  
-      &-3
-        margin-top: -490px  
-      &-4
-        margin-top: -230px  
-  .description-four
-    font-size: 16px    
-    line-height: 1.4
-  .dhz  
-    background: url('../img/mobile/dhz-bg-m.jpg') no-repeat cover center
-    &__row
-      display: flex
-      justify-content: center
-      align-items: center
-      &-back
-        margin-top: 4px
-      &-mid
-        display: flex
-        flex-direction: column
-      &--left
-        order: 1 
-    &-mobile-text
-      margin-top: 32px    
-    &__title
-      font-size: 27px  
-      margin-top: 30px  
-    &__subtitle
-      max-width: 100%  
-      margin-left: 16px 
-    &__img
-      margin-top: 20px
-      width: 227px
-      margin-left: -30px 
-    &__description
-      max-width: 100%
-      text-shadow: 0px 0px 16px rgba(0, 0, 0, 0.35) 
-      margin-left: 16px
-      margin-right: 16px 
-      display: flex
-      flex-direction: column
-    &__link
-      margin-left: 16px  
-      margin-top: 32px 
-  .partner
-    padding-top: 0
-    &__img
-      flex-basis: 50%
-      &:nth-child(1)
-        flex-basis: 50%
-      &:nth-child(2)
-        flex-basis: 50%
-      &:nth-child(3)
-        flex-basis: 50%    
-      &:nth-child(4)
-        flex-basis: 50%  
-      &--item
-        max-width: 120px  
-    &__title
-      margin-top: 0  
-      font-size: 17px
-    &__row
-      margin-top: 65px
-      margin-bottom: 112px
-      align-items: center  
-  .header
-    display: none   
-  .section
-    overflow-x: hidden  
-  .back-mobile
-    display: flex
-    background: url('../img/mobile/back.svg') no-repeat center
-    width: 13px
-    height: 25px 
-    position: absolute
-    left: 20px
-  .mobile
-    &-menu
-      display: flex
-      justify-content: space-between
-      padding: 50px 16px 0 16px
-      position: absolute
-      left: 0
-      top: -20px
-      width: 100%
-      z-index: 999
-      background-color: transparent 
-    &-logo
-      max-width: 226px  
-  .hands-card__volume, .horeca-card__volume, .home-card__volume, .medical-card__volume
-    font-size: 17px
-  .popup
-    position: relative
-    z-index: 999999
-    &_close
-      top: 70px
-      right: 30px
-
+        margin-top: 40px    

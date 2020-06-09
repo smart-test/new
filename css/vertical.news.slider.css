@@ -28,7 +28,7 @@ body {
 .news-headlines {
   list-style: none;
   position: relative;
-  max-width: 25vw;
+
 }
 .selected {
   font-size: 2vw;
@@ -44,8 +44,6 @@ body {
 .news-headlines li:before {
   content: "";
   display: inline-block;
-  width: 5px;
-  height: 5px;
   vertical-align: middle;
   margin-left: -12px;
   margin-right: 7px;
@@ -56,31 +54,18 @@ body {
   text-decoration: none;
 }
 
-.news-headlines .highlight {
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 10;
-}
-
-.news-headlines .highlight:before {
-  display: none;
-}
-
 .news-headlines {
    position: absolute;
    top: 0;
    right: 0;
-   width: 70%;
+   width: 20%;
 }
 
 .news-preview {
-   width: 52vw;
+   max-width: 52vw;
    position: relative;
    z-index: 5;
    margin-left: -1px;
-   min-height: 304px;
    position: relative;
 }
 
@@ -93,11 +78,13 @@ body {
 
 .news-content {
   z-index: 10;
-  padding: 10px;
   display: none;
 }
 
 .top-content {
   display: block;
+}
+.new-close {
+  display: none;
 }
 

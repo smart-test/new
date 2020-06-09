@@ -341,6 +341,10 @@ template {
   display: none;
 }
 
+html {
+  background: #fff;
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -1021,14 +1025,14 @@ button:active, button:focus {
   max-width: 15vw;
   margin-right: 7vw;
   margin-left: 0;
-  margin-bottom: 1.3vw;
+  margin-bottom: 2.3vw;
 }
 
 .product-medical__bottle--medical-1000 {
   max-width: 16vw;
   margin-left: 0;
   margin-right: 4vw;
-  margin-bottom: 1.3vw;
+  margin-bottom: 0;
 }
 
 .product-medical__bottle--medical-5000 {
@@ -2327,7 +2331,10 @@ button:active, button:focus {
 }
 
 .news-headlines {
-  max-width: 20vw;
+  position: absolute;
+  right: 0;
+  max-width: 30vw;
+  min-width: 22vw;
 }
 
 .news-headlines__item {
@@ -2346,8 +2353,6 @@ button:active, button:focus {
 
 .selected {
   width: 100%;
-  max-width: 370px;
-  min-width: 370px;
   font-size: 1.3vw;
   line-height: 1.53;
   text-transform: uppercase;
@@ -2358,10 +2363,22 @@ button:active, button:focus {
   font-weight: 500;
 }
 
+@media (max-width: 1230px) {
+  .news-content {
+    max-width: 65vw;
+  }
+  .news-headlines {
+    min-width: 30vw;
+  }
+}
+
 @media (max-width: 992px) {
   .new {
     margin-bottom: 0;
     padding-bottom: 100px;
+  }
+  .new-close {
+    margin-bottom: 50px;
   }
   .news-holder {
     display: -webkit-box;
@@ -2373,10 +2390,12 @@ button:active, button:focus {
     padding-bottom: 0;
   }
   .news-preview {
-    width: inherit;
+    max-width: 99vw;
+    min-width: 98vw;
   }
   .news-content {
     display: block;
+    min-width: 98vw;
     border: none;
     padding-right: 18px;
     padding-left: 18px;
@@ -2495,7 +2514,7 @@ button:active, button:focus {
 .modal__close {
   position: absolute;
   right: 20px;
-  top: 0px;
+  top: 15px;
   background: url("../img/mobile/close.svg") no-repeat center;
   border: none;
   margin: 12px;
@@ -2740,7 +2759,7 @@ button:active, button:focus {
   width: 100%;
 }
 
-@media screen and (max-width: 540px) {
+@media screen and (max-width: 768px) {
   .basket-icons {
     right: 5px;
     top: 90px;
@@ -2857,7 +2876,9 @@ button:active, button:focus {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    padding: 50px 16px 0 16px;
+    position: absolute;
+    top: 30px;
+    padding: 0px 16px 0 16px;
     position: absolute;
     left: 0;
     width: 100%;
@@ -2870,9 +2891,18 @@ button:active, button:focus {
   .header {
     display: none;
   }
+  .description {
+    font-size: 1.4vw;
+  }
+  .menu-puck {
+    right: 7.5vw;
+  }
 }
 
-@media screen and (max-width: 540px) {
+@media screen and (max-width: 768px) {
+  .menu-puck {
+    right: 1vw;
+  }
   body {
     width: 100%;
     font-size: 17px;
@@ -2985,6 +3015,9 @@ button:active, button:focus {
   .hands__text {
     margin-left: 6px;
   }
+  .hands__title {
+    min-width: 100%;
+  }
   .hands__subtitle {
     margin-top: -15px;
   }
@@ -2994,26 +3027,26 @@ button:active, button:focus {
   .hands__img {
     position: absolute;
     left: 14px;
-    margin-top: 240px;
-    min-width: 183px;
+    margin-top: 200px;
+    min-width: 40vw;
   }
   .hands__bootle {
     position: absolute;
-    margin-top: 230px;
-    right: 0;
-    min-width: 111px;
+    margin-top: 5vw;
+    right: 10vw;
+    min-width: 35vw;
   }
   .hands__description {
-    margin-top: 280px;
+    margin-top: 60vw;
     min-width: 97vw;
   }
   .hands__btn {
     margin-top: 14px;
   }
   .gif {
-    top: 450px;
-    width: 500px;
-    left: -120px;
+    top: 70vw;
+    width: 90vw;
+    left: -40vw;
   }
   .btn {
     font-size: 16px;
@@ -3025,6 +3058,7 @@ button:active, button:focus {
   }
   .home-and-office__title {
     margin-left: 0;
+    min-width: 100%;
   }
   .home-and-office__subtitle {
     margin-top: -15px;
@@ -3032,18 +3066,18 @@ button:active, button:focus {
   }
   .home-and-office__img {
     position: absolute;
-    right: 14px;
+    right: 15vw;
     margin-top: 190px;
-    min-width: 183px;
+    min-width: 45vw;
   }
   .home-and-office__bootle {
     position: absolute;
     margin-top: 190px;
     left: 0;
-    min-width: 111px;
+    min-width: 25vw;
   }
   .home-and-office__description {
-    margin-top: 280px;
+    margin-top: 70vw;
     min-width: 97vw;
     margin-left: 0;
     font-size: 14px;
@@ -3053,12 +3087,15 @@ button:active, button:focus {
     margin-left: 0;
   }
   .gif--out {
-    top: 400px;
-    width: 500px;
-    margin-left: -35px;
+    top: 80vw;
+    width: 90vw;
+    margin-left: -10vw;
   }
   .medical__text {
     margin-left: 6px;
+  }
+  .medical__title {
+    min-width: 100%;
   }
   .medical__subtitle {
     margin-top: -15px;
@@ -3071,16 +3108,16 @@ button:active, button:focus {
     left: 6px;
     margin-top: 240px;
     margin-left: 0;
-    min-width: 183px;
+    min-width: 40vw;
   }
   .medical__bootle {
     position: absolute;
-    margin-top: 230px;
-    right: 0;
-    min-width: 125px;
+    margin-top: 18vw;
+    right: 10vw;
+    min-width: 30vw;
   }
   .medical__description {
-    margin-top: 280px;
+    margin-top: 65vw;
     min-width: 97vw;
     font-size: 16px;
   }
@@ -3095,6 +3132,7 @@ button:active, button:focus {
   }
   .horeca__title {
     margin-left: 0;
+    min-width: 100%;
   }
   .horeca__subtitle {
     margin-top: -15px;
@@ -3102,19 +3140,19 @@ button:active, button:focus {
   }
   .horeca__img {
     position: absolute;
-    right: 14px;
-    margin-top: 230px;
-    min-width: 183px;
+    right: 10vw;
+    margin-top: 180px;
+    min-width: 45vw;
   }
   .horeca__bootle {
     position: absolute;
-    margin-top: 190px;
-    left: 0;
+    margin-top: 110px;
+    left: 5vw;
     margin-left: -20px;
-    min-width: 151px;
+    min-width: 36vw;
   }
   .horeca__description {
-    margin-top: 280px;
+    margin-top: 70vw;
     min-width: 97vw;
     margin-left: 0;
     font-size: 16px;
@@ -3299,6 +3337,824 @@ button:active, button:focus {
   }
   .product-hands__bottle {
     min-width: 170px;
+    margin-left: 0;
+    margin-right: 30px;
+  }
+  .product-hands__bottle-90 {
+    min-width: 187px;
+    margin-left: 0;
+    margin-right: 40px;
+  }
+  .product-hands__bottle-cap--left {
+    margin-bottom: 220px;
+  }
+  .product-hands__bottle-cap--left-m {
+    margin-bottom: 273px;
+  }
+  .bottle-cap__position {
+    min-width: 79px;
+  }
+  .bottle-cap__position-f {
+    min-width: 57px;
+  }
+  .hands-card__text {
+    margin-left: 0;
+    text-align: left;
+  }
+  .hands-card__title {
+    font-size: 17px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .hands-card__subtitle {
+    font-size: 16px;
+    max-width: 100%;
+    margin-top: -10px;
+  }
+  .hands-card__substance {
+    font-size: 16px;
+    margin-top: -20px;
+    font-weight: normal;
+  }
+  .hands-card__description {
+    font-size: 16px;
+    max-width: 100%;
+    margin-top: -10px;
+  }
+  .hands-card__row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .btn-row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    margin-top: 30px;
+  }
+  .product-home {
+    width: 100%;
+  }
+  .product-home__title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 5vw;
+  }
+  .product-home__row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .product-home__content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+  .product-home__left-row {
+    margin-top: 100px;
+  }
+  .product-home__left-card::before {
+    display: none;
+  }
+  .product-home__right {
+    margin-left: 0;
+  }
+  .product-home__bottle--home-500 {
+    min-width: 45vw;
+    position: relative;
+    top: 40vw;
+    margin-left: 40px;
+  }
+  .product-home__bottle--home-1000 {
+    min-width: 45vw;
+    position: relative;
+    top: 40vw;
+    margin-left: 39px;
+  }
+  .product-home__bottle--home-5000 {
+    min-width: 257px;
+    position: relative;
+    top: 0px;
+    max-width: 50%;
+    margin-left: 13px;
+    margin-bottom: -10vw;
+  }
+  .product-home__bottle-cap {
+    margin-bottom: 0;
+  }
+  .home-card__text {
+    margin-left: 0;
+    text-align: left;
+    margin-top: 40vw;
+    margin-bottom: 10vw;
+  }
+  .home-card__text-5000 {
+    margin-top: 10vw;
+  }
+  .home-card__title {
+    font-size: 17px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .home-card__subtitle {
+    font-size: 16px;
+    max-width: 100%;
+    margin-top: -10px;
+  }
+  .home-card__substance {
+    font-size: 16px;
+    margin-top: -20px;
+  }
+  .home-card__description {
+    font-size: 16px;
+    max-width: 100%;
+    margin-top: -10px;
+  }
+  .product-medical {
+    width: 100%;
+    padding-bottom: 100px;
+  }
+  .product-medical__row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 85px;
+  }
+  .product-medical__content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+  .product-medical__left-row {
+    margin-top: 100px;
+  }
+  .product-medical__left-card::before {
+    display: none;
+  }
+  .product-medical__right {
+    margin-left: 0;
+  }
+  .product-medical__bottle {
+    margin-top: 100px;
+  }
+  .product-medical__bottle--medical-250 {
+    min-width: 207px;
+    position: relative;
+    top: 270px;
+    max-width: 40%;
+    margin-bottom: -3vw;
+  }
+  .product-medical__bottle--medical-1000 {
+    min-width: 199px;
+    position: relative;
+    top: 270px;
+    max-width: 40%;
+    margin-bottom: -3vw;
+  }
+  .product-medical__bottle--medical-5000 {
+    min-width: 257px;
+    position: relative;
+    top: 200px;
+    max-width: 50%;
+  }
+  .product-medical__bottle-cap {
+    margin-bottom: -110px;
+  }
+  .medical-card__row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .medical-card__text {
+    margin-left: 0;
+    text-align: left;
+    margin-top: 320px;
+  }
+  .medical-card__text-5000 {
+    margin-top: 250px;
+  }
+  .medical-card__title {
+    font-size: 17px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    max-width: 100%;
+  }
+  .medical-card__subtitle {
+    font-size: 16px;
+    max-width: 100%;
+    margin-top: -10px;
+  }
+  .medical-card__substance {
+    font-size: 16px;
+    margin-top: -20px;
+  }
+  .medical-card__description {
+    font-size: 16px;
+    max-width: 100%;
+    margin-top: -10px;
+  }
+  .product-home__bottle-cap--h5000 {
+    margin-bottom: 40vw;
+  }
+  .product-medical__bottle-cap--left-250 {
+    margin-bottom: -10px;
+  }
+  .product-horeca__bottle-cap--left-250 {
+    margin-bottom: 17px;
+  }
+  .product-horeca {
+    width: 100%;
+    padding-bottom: 100px;
+  }
+  .product-horeca__row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 85px;
+  }
+  .product-horeca__content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+  .product-horeca__left-row {
+    margin-top: 100px;
+  }
+  .product-horeca__left-card::before {
+    display: none;
+  }
+  .product-horeca__right {
+    margin-left: 0;
+  }
+  .product-horeca__bottle {
+    margin-top: 100px;
+  }
+  .product-horeca__bottle--horeca-250 {
+    min-width: 207px;
+    position: relative;
+    top: 270px;
+    max-width: 40%;
+  }
+  .product-horeca__bottle--horeca-1000 {
+    min-width: 199px;
+    position: relative;
+    top: 270px;
+    max-width: 40%;
+  }
+  .product-horeca__bottle--horeca-5000 {
+    min-width: 257px;
+    position: relative;
+    top: 200px;
+    max-width: 50%;
+  }
+  .product-horeca__bottle-cap {
+    margin-bottom: -110px;
+  }
+  .horeca-card__row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .horeca-card__text {
+    margin-left: 0;
+    text-align: left;
+    margin-top: 320px;
+  }
+  .horeca-card__text-5000 {
+    margin-top: 250px;
+  }
+  .horeca-card__title {
+    font-size: 17px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    max-width: 100%;
+  }
+  .horeca-card__subtitle {
+    font-size: 16px;
+    max-width: 100%;
+    margin-top: -10px;
+  }
+  .horeca-card__substance {
+    font-size: 16px;
+    margin-top: -20px;
+  }
+  .horeca-card__description {
+    font-size: 16px;
+    max-width: 100%;
+    margin-top: -10px;
+  }
+  .gif-puck {
+    min-width: 38vw;
+    margin-left: 20vw;
+  }
+  .gif-brend {
+    min-width: 32vw;
+    margin-top: 22vw;
+    margin-left: 23.5vw;
+  }
+  .brend {
+    width: 100%;
+    padding: 70px 13px 0 13px;
+  }
+  .brend__description {
+    max-width: 100%;
+  }
+  .brend-sup {
+    font-size: 6px;
+    top: -12px;
+  }
+  .brend-sup-desc {
+    font-size: 5px;
+    top: -11px;
+  }
+  .brend__row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 70px;
+  }
+  .brend__row-back {
+    margin-top: 11px;
+  }
+  .brend__row--title {
+    max-width: 100%;
+    font-size: 17px;
+  }
+  .brend__row-mid {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .brend__row--left {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .brend__row--right {
+    margin-left: 186px;
+    margin-top: -320px;
+  }
+  .brend__img-big {
+    min-width: 40vw;
+    margin-top: 40px;
+  }
+  .four-line__card {
+    margin-bottom: 80px;
+  }
+  .four-line__card:nth-of-type(2) {
+    margin-left: 0;
+  }
+  .four-line__card--b::before {
+    display: none;
+  }
+  .four-line__card--b-m1::before {
+    content: '';
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: absolute;
+    height: 1px;
+    width: 107px;
+    background-color: #C4C4C4;
+    margin-top: -767px;
+    margin-left: 5px;
+  }
+  .four-line__card--b-m2::before {
+    content: '';
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: absolute;
+    height: 1px;
+    width: 107px;
+    background-color: #C4C4C4;
+    margin-top: -537px;
+    margin-left: 5px;
+  }
+  .four-line__card--b-m3::before {
+    content: '';
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: absolute;
+    height: 1px;
+    width: 107px;
+    background-color: #C4C4C4;
+    margin-top: -277px;
+    margin-left: 5px;
+  }
+  .four-line__title {
+    font-size: 17px;
+  }
+  .four-line__icons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 50px;
+  }
+  .four-line__icons-img-2 {
+    margin-top: 270px;
+  }
+  .four-line__icons-img-3 {
+    margin-top: 270px;
+  }
+  .four-line__icons-img-4 {
+    margin-top: 270px;
+  }
+  .four-line__icons-size {
+    max-width: 71px;
+  }
+  .four-line__subtitle--tm {
+    font-size: 5px;
+    top: -12px;
+  }
+  .four-line__description {
+    font-size: 16px;
+    max-width: 100%;
+    letter-spacing: -0.03em;
+  }
+  .card__row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .card-text-1 {
+    margin-top: -1000px;
+  }
+  .card-text-2 {
+    margin-top: -740px;
+  }
+  .card-text-3 {
+    margin-top: -490px;
+  }
+  .card-text-4 {
+    margin-top: -230px;
+  }
+  .description-four {
+    font-size: 16px;
+    line-height: 1.4;
+  }
+  .dhz {
+    background: url("../img/mobile/dhz-bg-m.jpg") no-repeat cover center;
+  }
+  .dhz__row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .dhz__row-back {
+    margin-top: 4px;
+  }
+  .dhz__row-mid {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .dhz__row--left {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .dhz-mobile-text {
+    margin-top: 32px;
+  }
+  .dhz__title {
+    font-size: 27px;
+    margin-top: 30px;
+  }
+  .dhz__subtitle {
+    max-width: 100%;
+    margin-left: 16px;
+  }
+  .dhz__img {
+    margin-top: 20px;
+    width: 227px;
+    margin-left: -30px;
+  }
+  .dhz__description {
+    max-width: 100%;
+    text-shadow: 0px 0px 16px rgba(0, 0, 0, 0.35);
+    margin-left: 16px;
+    margin-right: 16px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .dhz__link {
+    margin-left: 16px;
+    margin-top: 32px;
+  }
+  .partner {
+    padding-top: 0;
+  }
+  .partner__img {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+  }
+  .partner__img:nth-child(1) {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+  }
+  .partner__img:nth-child(2) {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+  }
+  .partner__img:nth-child(3) {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+  }
+  .partner__img:nth-child(4) {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+  }
+  .partner__img--item {
+    max-width: 120px;
+  }
+  .partner__title {
+    margin-top: 50px;
+    font-size: 17px;
+  }
+  .partner__row {
+    margin-top: 65px;
+    margin-bottom: 112px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .header {
+    display: none;
+  }
+  .section {
+    overflow-x: hidden;
+  }
+  .back-mobile {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background: url("../img/mobile/back.svg") no-repeat center;
+    width: 13px;
+    height: 25px;
+    position: absolute;
+    left: 20px;
+  }
+  .mobile-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 50px 16px 0 16px;
+    position: absolute;
+    left: 0;
+    top: -20px;
+    width: 100%;
+    z-index: 999;
+    background-color: transparent;
+  }
+  .mobile-logo {
+    max-width: 226px;
+  }
+  .hands-card__volume, .horeca-card__volume, .home-card__volume, .medical-card__volume {
+    font-size: 17px;
+  }
+  .popup {
+    position: relative;
+    z-index: 999999;
+  }
+  .popup_close {
+    top: 70px;
+    right: 30px;
+  }
+  .content_block {
+    display: none;
+  }
+  .content_visible {
+    display: block;
+  }
+  .new-close {
+    display: block;
+    font-size: 15px;
+    text-decoration: underline;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .hands__title {
+    min-width: 60%;
+  }
+  .hands__img {
+    position: absolute;
+    left: 14px;
+    margin-top: 240px;
+    min-width: 183px;
+  }
+  .hands__bootle {
+    position: absolute;
+    margin-top: 230px;
+    right: 0;
+    min-width: 111px;
+  }
+  .hands__description {
+    margin-top: 280px;
+    min-width: 97vw;
+  }
+  .gif {
+    top: 450px;
+    width: 500px;
+    left: -120px;
+  }
+  .home-and-office__title {
+    max-width: 60%;
+  }
+  .home-and-office__img {
+    position: absolute;
+    right: 14px;
+    margin-top: 190px;
+    min-width: 183px;
+  }
+  .home-and-office__bootle {
+    position: absolute;
+    margin-top: 190px;
+    min-width: 111px;
+  }
+  .home-and-office__description {
+    margin-top: 280px;
+  }
+  .gif--out {
+    top: 400px;
+    width: 500px;
+    margin-left: -35px;
+  }
+  .medical__title {
+    min-width: 50%;
+  }
+  .medical__img {
+    position: absolute;
+    left: 6px;
+    margin-top: 240px;
+    margin-left: 0;
+    min-width: 183px;
+  }
+  .medical__bootle {
+    position: absolute;
+    margin-top: 230px;
+    right: 0;
+    min-width: 125px;
+  }
+  .medical__description {
+    margin-top: 280px;
+  }
+  .horeca__title {
+    min-width: 50%;
+  }
+  .horeca__img {
+    position: absolute;
+    right: 14px;
+    margin-top: 230px;
+    min-width: 183px;
+  }
+  .horeca__bootle {
+    position: absolute;
+    margin-top: 190px;
+    left: 0;
+    margin-left: -20px;
+    min-width: 151px;
+  }
+  .horeca__description {
+    margin-top: 280px;
+    min-width: 97vw;
+    margin-left: 0;
+    font-size: 16px;
+  }
+  .product-hands {
+    padding-bottom: 100px;
+  }
+  .product-hands__title {
+    max-width: 300px;
+  }
+  .product-hands__row {
+    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .product-hands__content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .product-hands__left-card::before {
+    display: none;
+  }
+  .product-hands__right {
+    margin-left: 0;
+  }
+  .product-hands__bottle {
+    min-width: 170px;
     margin-left: 70px;
     margin-right: 0;
   }
@@ -3343,6 +4199,13 @@ button:active, button:focus {
     font-size: 16px;
     max-width: 100%;
     margin-top: -10px;
+  }
+  .hands-card__row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
   }
   .product-home {
     width: 100%;
@@ -3637,317 +4500,16 @@ button:active, button:focus {
   }
   .gif-puck {
     min-width: 46vw;
+    margin-left: 0;
   }
   .gif-brend {
     min-width: 38vw;
     margin-top: 31vw;
     margin-left: 5vw;
   }
-  .brend {
-    width: 100%;
-    padding: 70px 13px 0 13px;
-  }
-  .brend__description {
-    max-width: 100%;
-  }
-  .brend-sup {
-    font-size: 6px;
-    top: -12px;
-  }
-  .brend-sup-desc {
-    font-size: 5px;
-    top: -11px;
-  }
-  .brend__row {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    margin-top: 70px;
-  }
-  .brend__row-back {
-    margin-top: 11px;
-  }
-  .brend__row--title {
-    max-width: 100%;
-    font-size: 17px;
-  }
-  .brend__row-mid {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .brend__row--left {
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
-  }
-  .brend__row--right {
-    margin-left: 186px;
-    margin-top: -320px;
-  }
   .brend__img-big {
     min-width: 187px;
     margin-top: 40px;
-  }
-  .four-line__card {
-    margin-bottom: 80px;
-  }
-  .four-line__card:nth-of-type(2) {
-    margin-left: 0;
-  }
-  .four-line__card--b::before {
-    display: none;
-  }
-  .four-line__card--b-m1::before {
-    content: '';
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    position: absolute;
-    height: 1px;
-    width: 107px;
-    background-color: #C4C4C4;
-    margin-top: -767px;
-    margin-left: 5px;
-  }
-  .four-line__card--b-m2::before {
-    content: '';
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    position: absolute;
-    height: 1px;
-    width: 107px;
-    background-color: #C4C4C4;
-    margin-top: -537px;
-    margin-left: 5px;
-  }
-  .four-line__card--b-m3::before {
-    content: '';
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    position: absolute;
-    height: 1px;
-    width: 107px;
-    background-color: #C4C4C4;
-    margin-top: -277px;
-    margin-left: 5px;
-  }
-  .four-line__title {
-    font-size: 17px;
-  }
-  .four-line__icons {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    margin-top: 50px;
-  }
-  .four-line__icons-img-2 {
-    margin-top: 270px;
-  }
-  .four-line__icons-img-3 {
-    margin-top: 270px;
-  }
-  .four-line__icons-img-4 {
-    margin-top: 270px;
-  }
-  .four-line__icons-size {
-    max-width: 71px;
-  }
-  .four-line__subtitle--tm {
-    font-size: 5px;
-    top: -12px;
-  }
-  .four-line__description {
-    font-size: 16px;
-    max-width: 100%;
-    letter-spacing: -0.03em;
-  }
-  .card__row {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .card-text-1 {
-    margin-top: -1000px;
-  }
-  .card-text-2 {
-    margin-top: -740px;
-  }
-  .card-text-3 {
-    margin-top: -490px;
-  }
-  .card-text-4 {
-    margin-top: -230px;
-  }
-  .description-four {
-    font-size: 16px;
-    line-height: 1.4;
-  }
-  .dhz {
-    background: url("../img/mobile/dhz-bg-m.jpg") no-repeat cover center;
-  }
-  .dhz__row {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .dhz__row-back {
-    margin-top: 4px;
-  }
-  .dhz__row-mid {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .dhz__row--left {
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
-  }
-  .dhz-mobile-text {
-    margin-top: 32px;
-  }
-  .dhz__title {
-    font-size: 27px;
-    margin-top: 30px;
-  }
-  .dhz__subtitle {
-    max-width: 100%;
-    margin-left: 16px;
-  }
-  .dhz__img {
-    margin-top: 20px;
-    width: 227px;
-    margin-left: -30px;
-  }
-  .dhz__description {
-    max-width: 100%;
-    text-shadow: 0px 0px 16px rgba(0, 0, 0, 0.35);
-    margin-left: 16px;
-    margin-right: 16px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .dhz__link {
-    margin-left: 16px;
-    margin-top: 32px;
-  }
-  .partner {
-    padding-top: 0;
-  }
-  .partner__img {
-    -ms-flex-preferred-size: 50%;
-        flex-basis: 50%;
-  }
-  .partner__img:nth-child(1) {
-    -ms-flex-preferred-size: 50%;
-        flex-basis: 50%;
-  }
-  .partner__img:nth-child(2) {
-    -ms-flex-preferred-size: 50%;
-        flex-basis: 50%;
-  }
-  .partner__img:nth-child(3) {
-    -ms-flex-preferred-size: 50%;
-        flex-basis: 50%;
-  }
-  .partner__img:nth-child(4) {
-    -ms-flex-preferred-size: 50%;
-        flex-basis: 50%;
-  }
-  .partner__img--item {
-    max-width: 120px;
-  }
-  .partner__title {
-    margin-top: 0;
-    font-size: 17px;
-  }
-  .partner__row {
-    margin-top: 65px;
-    margin-bottom: 112px;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .header {
-    display: none;
-  }
-  .section {
-    overflow-x: hidden;
-  }
-  .back-mobile {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    background: url("../img/mobile/back.svg") no-repeat center;
-    width: 13px;
-    height: 25px;
-    position: absolute;
-    left: 20px;
-  }
-  .mobile-menu {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    padding: 50px 16px 0 16px;
-    position: absolute;
-    left: 0;
-    top: -20px;
-    width: 100%;
-    z-index: 999;
-    background-color: transparent;
-  }
-  .mobile-logo {
-    max-width: 226px;
-  }
-  .hands-card__volume, .horeca-card__volume, .home-card__volume, .medical-card__volume {
-    font-size: 17px;
-  }
-  .popup {
-    position: relative;
-    z-index: 999999;
-  }
-  .popup_close {
-    top: 70px;
-    right: 30px;
   }
 }
 /*# sourceMappingURL=style.css.map */
